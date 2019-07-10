@@ -10,6 +10,12 @@ import { People } from './people';
 export class AppComponent implements OnInit {
   title = 'AngularCrud';
 
+  name ='';
+  last_name ='';
+  phone='';
+  password='';
+  email='';
+  
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
