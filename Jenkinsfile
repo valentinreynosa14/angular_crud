@@ -24,6 +24,7 @@ pipeline{
                     echo 'run static code analysis'
                     sh '''
                         pwd
+                        npm install tslint-sonarts --save-dev
                         tslint --type-check --project tsconfig.json -c tslint.json 'src/**/*.ts'
                     '''
                 }
