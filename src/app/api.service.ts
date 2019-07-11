@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  PHP_API_SERVER = "http://localhost";
+  PHP_API_SERVER = 'http://localhost';
 
   constructor(private httpClient: HttpClient) { }
 
-  createPeople(people: People): Observable<People>{
+  createPeople(people: People): Observable<People> {
     return this.httpClient.post<People>(`${this.PHP_API_SERVER}/apirest/create.php`, people);
   }
 

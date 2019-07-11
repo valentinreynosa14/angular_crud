@@ -1,7 +1,7 @@
 export  class  People {
-    //id: number;
-    name:  string;
-    last_name:  string;
+    // id: number;
+    name: string;
+    lastname: string;
     phone: string;
     password: string;
     email: string;

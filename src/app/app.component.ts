@@ -10,23 +10,23 @@ import { People } from './people';
 export class AppComponent implements OnInit {
   title = 'AngularCrud';
 
-  name ='';
-  last_name ='';
-  phone='';
-  password='';
-  email='';
-  
+  name = '';
+  lastname = '';
+  phone = '';
+  password = '';
+  email = '';
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    
+
   }
 
-  createResource(form){
-    //form.value
-    console.log(form.value)
-    this.apiService.createPeople(form.value).subscribe((people: People)=>{
-      console.log("Resource created, ", people);
+  createResource(form) {
+    // form.value
+    console.log(form.value);
+    this.apiService.createPeople(form.value).subscribe((people: People) => {
+      console.log('Resource created, ', people);
     });
   }
 }
