@@ -12,7 +12,7 @@ pipeline{
                         node -v; npm -v
                         sudo npm install -g @angular/cli -y
                         git branch
-                        npm install
+                        sudo npm install
                         ls
                         ng build --prod
                         ls
