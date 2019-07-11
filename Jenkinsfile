@@ -9,7 +9,10 @@ pipeline{
                         sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
                         sudo apt-get install nodejs -y
                         node -v; npm -v
-                        sudo npm install -g @angular/cli -y          
+                        sudo npm install -g @angular/cli -y
+                        ls
+                        ng build --prod
+                        ls
                     '''
                 }
             }
