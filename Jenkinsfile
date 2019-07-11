@@ -10,7 +10,7 @@ pipeline{
                         sudo apt-get install nodejs -y
                         node -v; npm -v
                         sudo npm install -g @angular/cli -y
-                        git pull
+                        git branch
                         npm install
                         ls
                         ng build --prod
