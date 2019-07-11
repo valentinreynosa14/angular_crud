@@ -24,7 +24,8 @@ pipeline{
                     echo 'run static code analysis'
                     sh '''
                         pwd
-                        ng lint
+                        ng lint --fix=true
+
                     '''
                 }
             }            
