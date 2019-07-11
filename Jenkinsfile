@@ -4,7 +4,7 @@ pipeline{
             stage('Build'){
                 steps{
                     echo 'Hi i am working in my pipeline'
-                    sh 'ls'
+                    sh 'ng build --prod'
                 }
             }
         }
