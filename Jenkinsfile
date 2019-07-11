@@ -5,7 +5,8 @@ pipeline{
                 steps{
                     echo 'Hi i am working in my pipeline'
 
-                    sh '''  
+                    sh '''
+                        ls
                         sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
                         sudo apt-get install nodejs -y
                         node -v; npm -v
