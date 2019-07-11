@@ -24,8 +24,7 @@ pipeline{
                     echo 'run static code analysis'
                     sh '''
                         pwd
-                        sudo npm install tslint-sonarts --save-dev
-                        tslint --type-check --project tsconfig.json -c tslint.json '/var/lib/jenkins/workspace/angular_pipeline/src/**/*.ts'
+                        ng lint
                     '''
                 }
             }            
