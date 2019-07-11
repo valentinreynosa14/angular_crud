@@ -22,7 +22,7 @@ pipeline{
                 steps{
                     echo 'run static code analysis'
                     sh '''
-                        ls            
+                        pwd
                     '''
                 }
             }            
