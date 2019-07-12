@@ -26,8 +26,9 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
+    //browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
+    singleRun: true,
     restartOnFileChange: true,
     //listenAddress: '3.17.179.193'
   });
