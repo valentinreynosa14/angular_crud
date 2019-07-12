@@ -1,10 +1,5 @@
 pipeline{
-    agent {
-        docker { 
-            image 'avatsaev/angular-chrome-headless'
-            args '-u 0:0 --entrypoint=""' // set user to root
-        }
-    }
+    agent any
     stages{
         stage('Build'){
             steps{
@@ -38,8 +33,7 @@ pipeline{
             steps{
                 echo 'running unit test'
                 sh '''
-                    npm install
-                    ./node_modules/karma/bin/karma start karma.conf.js
+                    ng test
                 '''
             }
         }
