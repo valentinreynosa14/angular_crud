@@ -37,7 +37,7 @@ pipeline{
                     sh '''
                         ssh jenkins@3.17.179.193 'rm -rf /home/jenkins/angular_pipeline/dist'
                         ssh jenkins@3.17.179.193 'mkdir -p /home/jenkins/angular_pipeline/'
-                        ssh jenkins@3.17.179.193 rsync -azvh --progress /var/lib/jenkins/workspace/angular_pipeline /home/jenkins
+                        ssh jenkins@3.17.179.193 'rsync -azvh --progress /var/lib/jenkins/workspace/angular_pipeline jenkins@3.17.179.193:/home/jenkins
                     '''
                 }
             }            
