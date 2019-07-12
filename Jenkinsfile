@@ -31,7 +31,7 @@ pipeline{
             }
             stage('Deploy') {
                 steps{
-                    echo 'Deploy the content to the DEV enviroment
+                    echo 'Deploy the content to the DEV enviroment'
                     sh '''
                         //ssh jenkins@3.17.179.193 
                         su jenkins 
@@ -46,8 +46,7 @@ pipeline{
                         //ls
 
                         //DEPLOY DIR
-                        
-                        
+
                     '''
                 }
             }            
