@@ -33,7 +33,7 @@ pipeline{
             steps{
                 echo 'running unit test'
                 sh '''
-                    ng test
+                    //working in this
                 '''
             }
         }
