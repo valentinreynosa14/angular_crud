@@ -35,7 +35,7 @@ pipeline{
                 steps{
                     echo 'running unit test'
                     sh '''
-                        ng test
+                        ng test --single-run true
                     '''
                 }
             }
