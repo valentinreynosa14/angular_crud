@@ -31,10 +31,7 @@ pipeline{
         }
         stage('Unit Test') {
             steps{
-                echo 'running unit test'
-                sh '''
-                    //working in this
-                '''
+                echo 'working in the unit test stage'
             }
         }
         stage('Deploy') {
