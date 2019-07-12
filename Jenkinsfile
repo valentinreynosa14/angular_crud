@@ -20,14 +20,22 @@ pipeline{
                     '''
                 }
             }
-            stage('Sonarqube') {
+            stage('Static Code Analysis') {
                 steps{
-                    echo 'run static code analysis'
+                    echo 'running static code analysis'
                     sh '''
                         whoami
                         pwd
                         ng lint --fix=true
 
+                    '''
+                }
+            }
+            stage(){
+                steps{
+                    echo 'running unit test'
+                    sh '''
+                        ng test
                     '''
                 }
             }
