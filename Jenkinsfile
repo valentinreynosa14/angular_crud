@@ -6,6 +6,7 @@ pipeline{
                     echo 'Hi i am working in my pipeline'
 
                     sh '''
+                        whoami
                         ls
                         sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
                         sudo apt-get install nodejs -y
@@ -23,6 +24,7 @@ pipeline{
                 steps{
                     echo 'run static code analysis'
                     sh '''
+                        whoami
                         pwd
                         ng lint --fix=true
 
@@ -35,7 +37,7 @@ pipeline{
                     sh '''
                         ssh jenkins@3.17.179.193 'rm -rf /home/jenkins/angular_pipeline/dist'
                         ssh jenkins@3.17.179.193 'mkdir -p /home/jenkins/angular_pipeline/'
-                        rsync -azvh --progress /var/lib/jenkins/workspace/angular_pipeline jenkins@3.17.179.193:/home/jenkins
+                        ssh jenkins@3.17.179.193 rsync -azvh --progress /var/lib/jenkins/workspace/angular_pipeline /home/jenkins
                     '''
                 }
             }            
