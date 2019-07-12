@@ -33,20 +33,8 @@ pipeline{
                 steps{
                     echo 'Deploy the content to the DEV enviroment'
                     sh '''
-                        //ssh jenkins@3.17.179.193 
                         su jenkins 
                         rsync -ratv /var/lib/jenkins/workspace/angular_pipeline jenkins@3.17.179.193:/home/jenkins
-
-                        //Install dependences and services 
-                        //sudo npm install -g @angular/cli -y
-                        //git branch
-                        //sudo npm install
-                        //ls
-                        //ng build --prod
-                        //ls
-
-                        //DEPLOY DIR
-
                     '''
                 }
             }            
