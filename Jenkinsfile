@@ -35,7 +35,7 @@ pipeline{
                 steps{
                     echo 'running unit test'
                     sh '''
-                        ng test
+                        ./node_modules/karma/bin/karma start karma.conf.js
                     '''
                 }
             }
