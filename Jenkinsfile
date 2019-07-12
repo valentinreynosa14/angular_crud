@@ -33,7 +33,6 @@ pipeline{
                 steps{
                     echo 'Deploy the content to the DEV enviroment'
                     sh '''
-                        su - jenkins
                         ssh jenkins@3.17.179.193 rm -rf /home/jenkins/angular_pipeline/dist
                         ssh jenkins@3.17.179.193 mkdir -p /home/jenkins/angular_pipeline/
                         rsync -azvh --progress /var/lib/jenkins/workspace/angular_pipeline jenkins@3.17.179.193:/home/jenkins
