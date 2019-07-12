@@ -31,7 +31,7 @@ pipeline{
                     '''
                 }
             }
-            stage(){
+            stage('Unit Test') {
                 steps{
                     echo 'running unit test'
                     sh '''
