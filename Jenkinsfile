@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                echo 'Hi i am working in my pipeline'
+                echo 'Building the angular application'
                 sh '''
                     whoami
                     ls
