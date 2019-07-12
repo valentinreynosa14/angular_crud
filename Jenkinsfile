@@ -1,7 +1,7 @@
 pipeline{
     agent {
         docker { 
-            image 'avatsaev/angular-chrome-headless',
+            image 'avatsaev/angular-chrome-headless'
             args '-u 0:0 --entrypoint=""' // set user to root
         }
     }
