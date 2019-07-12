@@ -7,8 +7,8 @@ module.exports = function (config) {
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
-      //require('karma-chrome-launcher'),
-      require('karma-phantomjs-launcher'),
+      require('karma-chrome-launcher'),
+      //require('karma-phantomjs-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
@@ -26,9 +26,14 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    //browsers: ['Chrome'],
-    browsers: ['PhantomJS'],
-    singleRun: true,
+    browsers: ['Chrome', "HeadlessChrome"],
+    customLaunchers: {
+      HeadlessChrome: {
+      base: "ChromeHeadless",
+      flags: ["--no-sandbox"]
+      }
+    },
+    singleRun: false,
     restartOnFileChange: true,
     //listenAddress: '3.17.179.193'
   });

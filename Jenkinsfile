@@ -1,5 +1,8 @@
 pipeline{
-    agent any
+    agent {
+        image 'avatsaev/angular-chrome-headless',
+        args '-u 0:0 --entrypoint=""' // set user to root
+    }
         stages{
             stage('Build'){
                 steps{
